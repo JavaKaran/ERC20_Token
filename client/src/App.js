@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import SimpleStorageContract from "./contracts/SimpleStorage.json";
+import MyToken from "./contracts/MyToken.json";
+import MyTokenSale from "./contracts/MyTokenSale.json";
+import KycContract from "./contracts/KycContract.json";
 import getWeb3 from "./getWeb3";
 
 import "./App.css";

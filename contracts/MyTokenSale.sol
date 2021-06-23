@@ -10,7 +10,7 @@ KycContract kyc;
     constructor(
         uint256 rate,    // rate in TKNbits
         address payable wallet,
-        IERC20 token
+        IERC20 token,
         KycContract _kyc
     )
         Crowdsale(rate, wallet, token)
@@ -19,7 +19,7 @@ KycContract kyc;
         kyc = _kyc;
     }
     
-    function _preValidatePurchase(address beneficiary, uint256 weiAmount) internal view override {
+    function _preValidatePurchase(address beneficiary, uint256 weiAmount) internal override {
     super._preValidatePurchase(beneficiary, weiAmount);
     require(kyc.kycCompleted(beneficiary), "KYC not completed yet, aborting");
     }
